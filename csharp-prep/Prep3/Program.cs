@@ -12,11 +12,13 @@ class Program
         int response = int.Parse(number);*/
         
         int guess2 = -1;
+        int guessCount = 0;
+        string again = "yes";
        
         /*Building my Random number*/
 
         Random randomGenerator = new Random();
-        int magicNumber = randomGenerator.Next(0, 999);
+        int magicNumber = randomGenerator.Next(0, 99);
 
         /*Console.WriteLine("What is your guess?");
         
@@ -37,7 +39,7 @@ class Program
        
         /*Building my loop*/
         
-        while (guess2 != magicNumber) {
+        while (guess2 != magicNumber || again=="yes") {
             Console.WriteLine("What is your guess?");
             string guess = Console.ReadLine();
             guess2 = int.Parse(guess);
@@ -49,7 +51,13 @@ class Program
             }
             else {
             Console.WriteLine("You guessed it!");
+            Console.WriteLine("Do you want to play again?");
+            again = Console.ReadLine();
+            magicNumber = 0;
             }
-        }    
+            guessCount++;
+        }
+        Console.WriteLine($"You tried {guessCount} times!");
+
     }   
 }
