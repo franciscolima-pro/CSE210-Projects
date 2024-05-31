@@ -18,7 +18,7 @@ class Program
         video2.addComment(new Comment("Jason","This is a good video."));
         video2.addComment(new Comment("Marya","Wow, I learned a lot."));
 
-        video3.addComment(new Comment("Staley","Incredible!"));
+        video3.addComment(new Comment("Spencer","Incredible!"));
         video3.addComment(new Comment("Jhon","Very interesting"));
         video3.addComment(new Comment("Paul","I liked it so much!"));
 
